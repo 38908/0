@@ -10,4 +10,4 @@ jobs:
         java-version: '8'
         architecture: x86
     - run: sudo apt-get install libxaw7-dev libxcursor-dev libxmu-dev libxrandr-dev libxt-dev libxxf86vm-dev
-    - run: ant generate-all compile_native
+    - run: ant generate-all compile32
