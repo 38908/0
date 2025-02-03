@@ -24,6 +24,12 @@
 				<available file="${developer_path}/${sdk_path}/MacOSX10.9.sdk/${jvm_headers_path}" type="dir"/>
 			</and>
 		</condition>
+		<condition property="javavmroot" value="${developer_path}/${sdk_path}/macosx13.0.sdk">
+			<and>
+				<not><isset property="javavmroot"/></not>
+				<available file="${developer_path}/${sdk_path}/MacOSX10.9.sdk/${jvm_headers_path}" type="dir"/>
+			</and>
+		</condition>
 		<condition property="javavmroot" value="${developer_path}/${sdk_path}/MacOSX10.9.sdk">
 			<and>
 				<not><isset property="javavmroot"/></not>
@@ -58,6 +64,18 @@
 		<!-- Choose a MacOSX SDK -->
 		<property name="compiler" value="clang"/> <!-- Default to clang for 10.8 and up -->
 
+		<condition property="sdkroot" value="${developer_path}/${sdk_path}/macosx14.2.sdk">
+			<and>
+				<not><isset property="sdkroot"/></not>
+				<available file="${developer_path}/${sdk_path}/MacOSX10.9.sdk" type="dir"/>
+			</and>
+		</condition>
+		<condition property="sdkroot" value="${developer_path}/${sdk_path}/macosx13.0.sdk">
+			<and>
+				<not><isset property="sdkroot"/></not>
+				<available file="${developer_path}/${sdk_path}/MacOSX10.9.sdk" type="dir"/>
+			</and>
+		</condition>
 		<condition property="sdkroot" value="${developer_path}/${sdk_path}/MacOSX10.9.sdk">
 			<and>
 				<not><isset property="sdkroot"/></not>
