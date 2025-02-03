@@ -8,5 +8,8 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '8'
+        architecture: x86
     - uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: amd64_x86
     - run: ant generate-all compile_native
