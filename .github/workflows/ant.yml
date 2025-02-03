@@ -1,14 +1,11 @@
 on: workflow_dispatch
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: mac-13
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '8'
-        architecture: x86
-    - run: sudo apt-get install libxaw7-dev libxcursor-dev libxmu-dev libxrandr-dev libxt-dev libxxf86vm-dev
-    - run: ant generate-all
-    - run: ant -buildfile platform_build/linux_ant/build.xml compile32
+    - run: ant generate-all compile_native
