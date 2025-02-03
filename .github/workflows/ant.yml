@@ -8,5 +8,5 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '8'
-    - run: sudo apt-get install libxaw7-dev libxcursor-dev lixmu-dev libxrandr-dev libxt-dev libxxf86vm-dev
+    - run: sudo apt-get install libxaw7-dev libxcursor-dev libxmu-dev libxrandr-dev libxt-dev libxxf86vm-dev
     - run: ant generate-all compile_native
