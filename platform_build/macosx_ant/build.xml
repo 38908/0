@@ -6,7 +6,7 @@
 		<property environment="env" />
 		<!-- Ask Xcode for correct path to XCode tools -->
 		<!-- Will fail if XCode Command Line Tools are not installed on 10.7+ (Lion) -->
-		<exec executable="xcode-select" outputproperty="developer_path" errorproperty="xcode-select.error" failonerror="false" failifexecutionfails="false">
+		<exec executable="xcode-select" outputproperty="developer_path" errorproperty="xcode-select.error" failonerror="true" failifexecutionfails="false">
 			<arg value="-print-path" />
 		</exec>
 		<!-- Default to /Developer if xcode-select fails -->
