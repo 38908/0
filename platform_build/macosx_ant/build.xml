@@ -18,10 +18,10 @@
 		<property name="jvm_headers_path" value="System/Library/Frameworks/JavaVM.framework/Versions/A/Headers"/>
 
 		<!-- Choose a JavaVM.framework -->
-		<condition property="javavmroot" value="${developer_path}/${sdk_path}/MacOSX14.2.sdk">
+		<condition property="javavmroot" value=".">
 			<and>
 				<not><isset property="javavmroot"/></not>
-				<available file="${jvm_headers_path}" type="dir"/>
+				<available file="./${jvm_headers_path}" type="dir"/>
 			</and>
 		</condition>
 		<condition property="javavmroot" value="${developer_path}/${sdk_path}/MacOSX10.8.sdk">
