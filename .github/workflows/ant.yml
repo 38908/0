@@ -11,3 +11,5 @@ jobs:
     - run: xcode-select -print-path
     - run: export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
     - run: ant generate-all compile_native
+    - run: xcrun --show-sdk-path
+    - run: xcrun --sdk macosx --show-sdk-path
