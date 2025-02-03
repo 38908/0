@@ -3,4 +3,5 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: ls /System/Library/Frameworks/JavaVM.framework
+    - uses: actions/checkout@v4
+    - run: ant generate-all compile_native
