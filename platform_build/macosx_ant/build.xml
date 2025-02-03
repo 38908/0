@@ -23,6 +23,7 @@
 				<not><isset property="javavmroot"/></not>
 				<available file="${developer_path}/${sdk_path}/MacOSX10.9.sdk/${jvm_headers_path}" type="dir"/>
 			</and>
+		</condition>
 		<condition property="javavmroot" value="${developer_path}/${sdk_path}/MacOSX10.9.sdk">
 			<and>
 				<not><isset property="javavmroot"/></not>
