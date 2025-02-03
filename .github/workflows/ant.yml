@@ -3,4 +3,4 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: ls /Applications/Xcode_15.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
+    - run: ls /Applications/Xcode_15.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/JavaVM.framework
