@@ -3,4 +3,4 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: /usr/libexec/java_home -v 8
+    - run: ls /Applications/Xcode_15.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
