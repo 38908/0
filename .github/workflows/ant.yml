@@ -9,7 +9,7 @@ jobs:
         distribution: 'zulu'
         java-version: '8'
     - uses: ilammy/msvc-dev-cmd@v1
-    - run: ant generate-all -compile_native_win32
+    - run: ant generate-all compile_native
     - uses: actions/cache/save@v4
       with:
         path: bin/lwjgl64.dll
@@ -27,7 +27,7 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1
       with:
         arch: amd64_x86
-    - run: ant generate-all -compile_native_win32
+    - run: ant generate-all compile_native
     - uses: actions/cache/save@v4
       with:
         path: bin/lwjgl.dll
