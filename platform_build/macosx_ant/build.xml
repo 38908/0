@@ -18,10 +18,10 @@
 		<property name="jvm_headers_path" value="System/Library/Frameworks/JavaVM.framework/Versions/A/Headers"/>
 
 		<!-- Choose a JavaVM.framework -->
-		<condition property="javavmroot" value=".">
+		<condition property="javavmroot" value="${developer_path}/${sdk_path}/MacOSX10.9.sdk">
 			<and>
 				<not><isset property="javavmroot"/></not>
-				<available file="/${jvm_headers_path}" type="dir"/>
+				<available file="${developer_path}/${sdk_path}/MacOSX10.9.sdk/${jvm_headers_path}" type="dir"/>
 			</and>
 		</condition>
 		<condition property="javavmroot" value="${developer_path}/${sdk_path}/MacOSX10.8.sdk">
@@ -111,7 +111,7 @@
 
 	<target name="compile" depends="init">
 		<apply dir="${dstdir}" executable="${compiler}" os="Mac OS X" skipemptyfilesets="true" failonerror="true" dest="${dstdir}">
-			<arg line="${cflags} -ObjC -O2 -Wall -Wunused -c -fPIC -I${javavmroot}/${jvm_headers_path} -I${native}/common -I${native}/common/opengl -I${native}/macosx"/>
+			<arg line="${cflags} -ObjC -O2 -Wall -Wunused -c -fPIC -I/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/include -I${native}/common -I${native}/common/opengl -I${native}/macosx"/>
 			<!-- Map from *.m and *.c to .o -->
 			<mapper type="regexp" from="^(.*)\.(c|m)" to="\1.o"/>
 			<fileset dir="${native}/macosx" includes="*.m"/>
