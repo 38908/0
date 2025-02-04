@@ -13,7 +13,7 @@ jobs:
     - uses: actions/cache/save@v4
       with:
         path: bin/lwjgl64.dll
-        key: ${{ runner.os }}-${{ hashFiles('bin/lwjgl64.dll') }}
+        key: ${{ runner.os }}-${{ hashFiles('libs/lwjgl64.dll') }}
         enableCrossOsArchive: true
   build-windows-x86-native:
     runs-on: windows-latest
@@ -31,5 +31,5 @@ jobs:
     - uses: actions/cache/save@v4
       with:
         path: bin/lwjgl.dll
-        key: ${{ runner.os }}-${{ hashFiles('bin/lwjgl.dll') }}
+        key: ${{ runner.os }}-${{ hashFiles('libs/lwjgl.dll') }}
         enableCrossOsArchive: true
