@@ -3,5 +3,5 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: echo $JAVA_HOME_8_X64
-    - run: ls /System/Library/Frameworks/JavaVM.framework/Versions/
+    - run: ls /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/
+    - run: ls /System/Library/Frameworks/JavaVM.framework/Versions/Current
