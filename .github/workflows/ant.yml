@@ -3,4 +3,5 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: ls /System/Library/Frameworks/JavaVM.framework/Versions/B
+    - run: echo $JAVA_HOME_8_X64
+    - run: ls /System/Library/Frameworks/JavaVM.framework/Versions/
