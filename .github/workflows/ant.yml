@@ -3,4 +3,4 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: ls /System/Library/Frameworks/JavaVM.framework/Versions/A
+    - run: ls /System/Library/Frameworks/JavaVM.framework/Versions/B
