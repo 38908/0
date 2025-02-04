@@ -12,7 +12,7 @@ jobs:
     - run: ant generate-all compile_native
     - uses: actions/cache/save@v4
       with:
-        path: bin/lwjgl64.dll
+        path: libs/lwjgl64.dll
         key: ${{ runner.os }}-${{ hashFiles('libs/lwjgl64.dll') }}
         enableCrossOsArchive: true
   build-windows-x86-native:
@@ -30,6 +30,6 @@ jobs:
     - run: ant generate-all compile_native
     - uses: actions/cache/save@v4
       with:
-        path: bin/lwjgl.dll
+        path: libs/lwjgl.dll
         key: ${{ runner.os }}-${{ hashFiles('libs/lwjgl.dll') }}
         enableCrossOsArchive: true
