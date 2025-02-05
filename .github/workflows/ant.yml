@@ -11,6 +11,9 @@ jobs:
         git sparse-checkout set --cone
         git sparse-checkout set MacOSX10.9.sdk
         pwd
+        cd MacOSX10.9.sdk
+        ls */
+        pwd
         cd System
         pwd
         ls */
