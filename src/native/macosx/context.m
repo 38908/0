@@ -102,9 +102,9 @@ NSOpenGLPixelFormat *choosePixelFormat(JNIEnv *env, jobject pixel_format, bool g
 			else if(CFStringCompare(pixEnc, CFSTR(IO8BitIndexedPixels), kCFCompareCaseInsensitive) == kCFCompareEqualTo)
 				bpp = 8;
 			else
-				bpp = CGDisplayBitsPerPixel(kCGDirectMainDisplay);
+				bpp = kCGDisplayBitsPerPixel(kCGDirectMainDisplay);
 		} else {
-			bpp = CGDisplayBitsPerPixel(kCGDirectMainDisplay);
+			bpp = kCGDisplayBitsPerPixel(kCGDirectMainDisplay);
 		}
 	}
 	else
