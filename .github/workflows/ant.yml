@@ -4,10 +4,8 @@ jobs:
     runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
-    - run: |
-        echo $SHELL
-        % nano ~/.bash_profile
-        export JAVA_HOME=$(/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/)
-        % source ~/.bash_profile
-        echo $JAVA_HOME
+    - run: echo $SHELL
+    - run: echo $JAVA_HOME
+    - run: export JAVA_HOME=$(/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/) ~/.bash_profile
+    - run: echo $JAVA_HOME
     - run: ant generate-all compile_native
