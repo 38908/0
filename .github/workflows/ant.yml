@@ -4,12 +4,18 @@ jobs:
     runs-on: macos-13
     steps:
     - run: |
+        pwd
+        ls *
         git clone --filter=blob:none --no-checkout https://github.com/phracker/MacOSX-SDKs
+        ls *
         cd MacOSX-SDKs
+        ls *
         git sparse-checkout set --cone
+        ls *
         git checkout master
+        ls *
         git sparse-checkout set MacOSX10.9.sdk
-        ls .
+        ls *
 #   - uses: actions/checkout@v4
 #   - uses: actions/setup-java@v4
 #     with:
