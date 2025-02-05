@@ -46,10 +46,10 @@
 		<!-- Choose a MacOSX SDK -->
 		<property name="compiler" value="clang"/> <!-- Default to clang for 10.8 and up -->
 
-		<condition property="sdkroot" value="${developer_path}/${sdk_path}/MacOSX13.0.sdk">
+		<condition property="sdkroot" value="/MacOSX-SDKs/MacOSX10.9.sdk">
 			<and>
 				<not><isset property="sdkroot"/></not>
-				<available file="${developer_path}/${sdk_path}/MacOSX13.0.sdk" type="dir"/>
+				<available file="/MacOSX-SDKs/MacOSX10.9.sdk" type="dir"/>
 			</and>
 		</condition>
 		<condition property="sdkroot" value="${developer_path}/${sdk_path}/MacOSX10.8.sdk">
