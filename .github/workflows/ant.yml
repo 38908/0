@@ -7,5 +7,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: |
-        export JAVA_HOME=/usr/libexec/java_home -v 1.8
+        export JAVA_HOME=\$(/usr/libexec/java_home -v 1.8)
         ant generate-all compile_native
