@@ -43,6 +43,9 @@
 				<available file="/${jvm_headers_path}" type="dir"/>
 			</and>
 		</condition>
+		
+		<!-- Choose a MacOSX SDK -->
+		<property name="compiler" value="clang"/> <!-- Default to clang for 10.8 and up -->
 	</target>
 
 	<target name="clean">
