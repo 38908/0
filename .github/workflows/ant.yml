@@ -9,6 +9,9 @@ jobs:
         git sparse-checkout set --cone
         git checkout master
         git sparse-checkout set MacOSX10.9.sdk
+        ls */
+        ls *
+        ls .
 #   - uses: actions/checkout@v4
 #   - uses: actions/setup-java@v4
 #     with:
