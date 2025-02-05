@@ -89,7 +89,7 @@
 
 	<target name="compile" depends="init">
 		<apply dir="${dstdir}" executable="${compiler}" os="Mac OS X" skipemptyfilesets="true" failonerror="true" dest="${dstdir}">
-			<arg line="${cflags} -ObjC -O2 -Wall -Wunused -c -fPIC -I$JAVA_HOME_8_X64/include -I$JAVA_HOME_8_X64/include/darwin -I${native}/common -I${native}/common/opengl -I${native}/macosx"/>
+			<arg line="${cflags} -ObjC -O2 -Wall -Wunused -c -fPIC -I/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/include -I/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/include/darwin -I${native}/common -I${native}/common/opengl -I${native}/macosx"/>
 			<!-- Map from *.m and *.c to .o -->
 			<mapper type="regexp" from="^(.*)\.(c|m)" to="\1.o"/>
 			<fileset dir="${native}/macosx" includes="*.m"/>
