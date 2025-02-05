@@ -6,7 +6,6 @@ jobs:
     - uses: actions/checkout@v4
     - run: |
         echo $SHELL
-        echo export "JAVA_HOME=\$(/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.14-7/x64/Contents/Home/)" >> ~/.bash_profile
-        echo export "JAVA_HOME=\$(/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.14-7/x64/Contents/Home/)" >> ~/.zshrc
+        echo export "JAVA_HOME=\$(/Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/)" >> ~/.bash_profile
         echo $JAVA_HOME
     - run: ant generate-all compile_native
