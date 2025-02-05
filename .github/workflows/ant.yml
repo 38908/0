@@ -4,15 +4,11 @@ jobs:
     runs-on: macos-13
     steps:
     - run: git clone https://github.com/phracker/MacOSX-SDKs
-    - run: ls -d */
-    - run: ls -d phracker
-    - run: ls -d phracker/MacOSX-SDKs
-    - run: find */ -type d -maxdepth 4
-#   - uses: actions/checkout@v4
-#   - uses: actions/setup-java@v4
-#     with:
-#       distribution: 'zulu'
-#       java-version: '8'
-#   - run: echo $JAVA_HOME
-#   - run: echo $JAVA_HOME_8_X64
-#   - run: ant generate-all compile_native
+    - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '8'
+    - run: echo $JAVA_HOME
+    - run: echo $JAVA_HOME_8_X64
+    - run: ant generate-all compile_native
