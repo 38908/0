@@ -2,10 +2,8 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: macos-13
-#   env:
-#     JAVA_HOME: $JAVA_HOME_8_X64
+    env:
+      JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/
     steps:
     - uses: actions/checkout@v4
-    - run: |
-        export JAVA_HOME=\$(/usr/libexec/java_home -v 1.8)
-        ant generate-all compile_native
+    - run: ant generate-all compile_native
