@@ -2,8 +2,10 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: macos-13
-    env:
-      JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.442-6/x64/Contents/Home/
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
+      with:
+        distribution: 'zulu'
+        java-version: '8'
     - run: ant generate-all compile_native
