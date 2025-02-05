@@ -43,7 +43,6 @@
 
 #ifndef __LWJGL_CONTEXT_H
 #define __LWJGL_CONTEXT_H
-#define kCGDisplayBitsPerPixel			CFSTR("BitsPerPixel")
 
 #include <Cocoa/Cocoa.h>
 #include <OpenGL/gl.h>
