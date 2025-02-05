@@ -101,11 +101,12 @@ NSOpenGLPixelFormat *choosePixelFormat(JNIEnv *env, jobject pixel_format, bool g
 		else if(CFStringCompare(pixEnc, CFSTR(IO8BitIndexedPixels), kCFCompareCaseInsensitive) == kCFCompareEqualTo)
 			bpp = 8;
 		else if(CFStringCompare(pixEnc, CFSTR(IO4BitIndexedPixels), kCFCompareCaseInsensitive) == kCFCompareEqualTo)
-			bpp = 8;
+			bpp = 4;
     		else if(CFStringCompare(pixEnc, CFSTR(IO2BitIndexedPixels), kCFCompareCaseInsensitive) == kCFCompareEqualTo)
-			bpp = 8;
+			bpp = 2;
     		else if(CFStringCompare(pixEnc, CFSTR(IO1BitIndexedPixels), kCFCompareCaseInsensitive) == kCFCompareEqualTo)
-			bpp = 8;
+			bpp = 1;
+   		else throwException(env, "Unknown pixel encoding");
 	}
 	else
 		bpp = (int)(*env)->GetIntField(env, pixel_format, (*env)->GetFieldID(env, cls_pixel_format, "bpp", "I"));
