@@ -50,6 +50,10 @@
 #include "common_tools.h"
 #include <jawt_md.h>
 
+typedef struct {
+    NSView *cocoaViewRef;
+} JAWT_MacOSXDrawingSurfaceInfo;
+
 enum {
 	NSControlLeftKeyMask =      0x0001,
 	NSControlRightKeyMask =     0x2000,
