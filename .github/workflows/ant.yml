@@ -2,8 +2,10 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: macos-13
-    env:
-      JAVA_HOME: $JAVA_HOME_8_X64
+#   env:
+#     JAVA_HOME: $JAVA_HOME_8_X64
     steps:
     - uses: actions/checkout@v4
-    - run: ant generate-all compile_native
+    - run: |
+        export JAVA_HOME=/usr/libexec/java_home -v 1.8
+        ant generate-all compile_native
