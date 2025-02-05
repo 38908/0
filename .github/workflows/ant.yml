@@ -6,8 +6,8 @@ jobs:
     - uses: actions/checkout@v4
     - uses: actions/setup-java@v4
       with:
-        distribution: 'temurin'
-        java-version: '8.0.5'
+        distribution: 'zulu'
+        java-version: '7'
     - run: echo $JAVA_HOME
     - run: echo $JAVA_HOME_8_X64
     - run: ant generate-all compile_native
