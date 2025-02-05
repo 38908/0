@@ -3,5 +3,5 @@ jobs:
   build:
     runs-on: macos-13
     steps:
-    - run: echo $JAVA_HOME
-    - run: echo $JAVA_HOME_8_X64
+    - uses: actions/checkout@v4
+    - run: ant generate-all compile_native
