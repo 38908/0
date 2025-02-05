@@ -4,10 +4,13 @@ jobs:
     runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
+    - run: wget -O $RUNNER_TEMP/java_package.dmg https://cfdownload.adobe.com/pub/adobe/coldfusion/java/java8/java8u441/jdk/jdk-8u441-macosx-x64.dmg
     - uses: actions/setup-java@v4
       with:
-        distribution: 'zulu'
-        java-version: '7'
+        distribution: 'jdkfile'
+        jdkfile: ${{ runner.temp }}/java_package.dmg
+        java-version: '8.0.441'
+        architecture: x64
     - run: echo $JAVA_HOME
     - run: echo $JAVA_HOME_8_X64
     - run: ant generate-all compile_native
