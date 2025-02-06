@@ -12,6 +12,8 @@ jobs:
   build-windows-x86_64-native:
     runs-on: windows-latest
     steps:
+    - run: dir /s /b
+      shell: cmd
 #   - run: curl -O https://cfdownload.adobe.com/pub/adobe/coldfusion/java/java8/java8u441/jdk/jdk-8u441-windows-x64.zip
 #   - uses: actions/setup-java@v4
 #     with:
@@ -26,6 +28,7 @@ jobs:
     - uses: actions/checkout@v4
     - run: ant all
     - run: dir /s /b
+      shell: cmd
 #   - uses: actions/upload-artifact@v4
 #     with:
 #       path: |
