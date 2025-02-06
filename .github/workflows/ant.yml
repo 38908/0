@@ -12,12 +12,13 @@ jobs:
   build-windows-x86_64-native:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v4
+    - run: curl -O https://cfdownload.adobe.com/pub/adobe/coldfusion/java/java8/java8u441/jdk/jdk-8u441-windows-x64.zip
     - uses: actions/setup-java@v4
       with:
-        distribution: 'zulu'
-        java-version: '8'
+        distribution: 'jdkfile'
+        jdkFile: jdk-8u441-windows-x64.zip
     - uses: ilammy/msvc-dev-cmd@v1
+    - uses: actions/checkout@v4
     - run: ant jars
     - uses: actions/upload-artifact@v4
       with:
@@ -26,7 +27,7 @@ jobs:
           libs/lwjgl_util_applet.jar
           libs/lwjgl_test.jar
           libs/lwjgl_util.jar
-        compression-level: 0
+        compression-level: 9
 # build-windows-x86-native:
 #   runs-on: windows-latest
 #   steps:
