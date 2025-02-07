@@ -350,7 +350,7 @@ jlong getPointerWrapperAddress(JNIEnv *env, jobject wrapper) {
 
 JNIEnv *getThreadEnv() {
 	JNIEnv *env;
-	(*jvm)->GetEnv(jvm, (void *)&env, JNI_VERSION_1_4);
+	(*jvm)->GetEnv(jvm, (void *)&env, JNI_VERSION_1_8);
 	return env;
 }
 
@@ -377,7 +377,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
     clazz = (*env)->FindClass(env, "org/lwjgl/PointerWrapper");
     mPointerWrapper_getPointer = (*env)->GetMethodID(env, clazz, "getPointer", "()J");
 
-    return JNI_VERSION_1_4;
+    return JNI_VERSION_1_8;
 }
 
 JNIEXPORT void JNICALL JNI_OnUnload(JavaVM *vm, void *reserved) {
