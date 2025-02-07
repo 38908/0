@@ -43,7 +43,7 @@ import java.lang.UnsatisfiedLinkError;
  * $Id$
  */
 final class LinuxSysImplementation extends J2SESysImplementation {
-	private static final int JNI_VERSION = 19;
+	private static final int JNI_VERSION = 25;
 
 	static {
 		// Load libawt.so and libmawt.so, needed for libjawt.so
