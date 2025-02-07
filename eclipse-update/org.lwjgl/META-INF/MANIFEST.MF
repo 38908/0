@@ -27,7 +27,7 @@ Export-Package: LZMA,
  org.lwjgl.util.input,
  org.lwjgl.util.jinput,
  org.lwjgl.util.vector
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: J2SE-1.8
 Bundle-ClassPath: .,
  lwjgl.jar,
  lwjgl_util.jar,
