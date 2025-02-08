@@ -297,9 +297,9 @@
 	<target name="headers" description="invokes javah on java classes" depends="compile"/>
 
 	<target name="touch-version">
-		<touch file="${lwjgl.src.native}/windows/org_lwjgl_opengl_Display.c"/>
-		<touch file="${lwjgl.src.native}/linux/org_lwjgl_opengl_Display.c"/>
-		<touch file="${lwjgl.src.native}/macosx/org_lwjgl_opengl_Display.m"/>
+		<touch file="${lwjgl.src.native}//org_lwjgl_opengl_Display.c"/>
+		<touch file="${lwjgl.src.native}//org_lwjgl_opengl_Display.c"/>
+		<touch file="${lwjgl.src.native}//org_lwjgl_opengl_Display.m"/>
 	</target>
 
 	<target name="version-mismatch">
@@ -324,21 +324,21 @@
 				</tokenfilter>
 			</filterchain>
 		</loadfile>
-		<loadfile srcfile="${lwjgl.src.native}/windows/org_lwjgl_WindowsSysImplementation.h" property="lwjgl.native.windows.version">
+		<loadfile srcfile="${lwjgl.src.native}//org_lwjgl_WindowsSysImplementation.h" property="lwjgl.native.windows.version">
 			<filterchain>
 				<tokenfilter>
 	    		<containsstring contains="#define org_lwjgl_WindowsSysImplementation_JNI_VERSION"/>
 				</tokenfilter>
 			</filterchain>
 		</loadfile>
-		<loadfile srcfile="${lwjgl.src.native}/linux/org_lwjgl_LinuxSysImplementation.h" property="lwjgl.native.linux.version">
+		<loadfile srcfile="${lwjgl.src.native}//org_lwjgl_LinuxSysImplementation.h" property="lwjgl.native.linux.version">
 			<filterchain>
 				<tokenfilter>
 	    		<containsstring contains="#define org_lwjgl_LinuxSysImplementation_JNI_VERSION"/>
 				</tokenfilter>
 			</filterchain>
 		</loadfile>
-		<loadfile srcfile="${lwjgl.src.native}/macosx/org_lwjgl_MacOSXSysImplementation.h" property="lwjgl.native.macosx.version">
+		<loadfile srcfile="${lwjgl.src.native}//org_lwjgl_MacOSXSysImplementation.h" property="lwjgl.native.macosx.version">
 			<filterchain>
 				<tokenfilter>
 	    		<containsstring contains="#define org_lwjgl_MacOSXSysImplementation_JNI_VERSION"/>
