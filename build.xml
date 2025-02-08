@@ -463,6 +463,7 @@
 	<!-- Compiles the Java source code -->
 	<target name="compile" description="Compiles the java source code" depends="-initialize">
 		<javac debug="yes" destdir="${lwjgl.bin}" source="1.6" target="1.6" classpath="${lwjgl.lib}/jinput.jar:${lwjgl.lib}/AppleJavaExtensions.jar:${lwjgl.lib}/asm-debug-all.jar" taskname="core">
+			<compilerarg value="-proc:none"/>
             <!--<compilerarg value="-Xlint:unchecked"/>-->
 			<src path="${lwjgl.src}/java/"/>
 			<src path="${lwjgl.src}/generated/"/>
